@@ -1,6 +1,6 @@
 ## Homework Week 2
 
-# Bir fatura ödeme / sorgulama / ödeme iptali işlemleri yapan proje kodu.
+#### Bir fatura ödeme / sorgulama / ödeme iptali işlemleri yapan proje kodu.
 
 - Faturaları ilişkilendireceğimiz bir MemberAccount class, MemberAccountService gibi create/read/update/delete işlemleri yapan bir servis class,
 - Fatura için amount, process_date, bill_type , id bilgileri tutulsun.

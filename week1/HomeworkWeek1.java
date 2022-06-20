@@ -7,21 +7,21 @@ public class HomeworkWeek1 {
     String s2 = "Welcome";
     String s3 = "Welcome";
     /* 
-     * 1 tane obje oluşturulacaktır. 
+     * 1 tane obje oluÅŸturulacaktÄ±r. 
      * 
-     * s1 değişkenine "Welcome" değeri atandığında, Java kendi içerisinde tuttuğu String Pool adlı yapıda bu değerin 
-     * bulunup bulunmadığını kontrol eder. Bulunmuyorsa hafızadan "Welcome" değeri için bir yer ayırır, s1 değişkeni
-     * hafızadaki bu alanı referans eder ve String Pool adlı yapıya "Welcome" değerini ekler. Eğer bulunuyorsa "Welcome" 
-     * değeri için daha önceden hafızadan yer ayrılmış demektir ve s1 değişkeni direkt olarak hafızadaki bu alanı referans eder.
+     * s1 deÄŸiÅŸkenine "Welcome" deÄŸeri atandÄ±ÄŸÄ±nda, Java kendi iÃ§erisinde tuttuÄŸu String Pool adlÄ± yapÄ±da bu deÄŸerin 
+     * bulunup bulunmadÄ±ÄŸÄ±nÄ± kontrol eder. Bulunmuyorsa hafÄ±zadan "Welcome" deÄŸeri iÃ§in bir yer ayÄ±rÄ±r, s1 deÄŸiÅŸkeni
+     * hafÄ±zadaki bu alanÄ± referans eder ve String Pool adlÄ± yapÄ±ya "Welcome" deÄŸerini ekler. EÄŸer bulunuyorsa "Welcome" 
+     * deÄŸeri iÃ§in daha Ã¶nceden hafÄ±zadan yer ayrÄ±lmÄ±ÅŸ demektir ve s1 deÄŸiÅŸkeni direkt olarak hafÄ±zadaki bu alanÄ± referans eder.
      * 
-     * s1 değişkeni tanımlandığında "Welcome" değeri daha önceden havuzda bulunmayacaktır. "Welcome" değerini içeren yeni
-     * bir String objesi oluşturulacak ve s1 değişkeni bu objeyi referans edecektir. Ancak s2 ve s3 değişkenleri tanımlandığında
-     * "Welcome" değeri havuzda bulunduğu için bu değişkenler direkt olarak hafızadaki s1'in referans ettiği objeyi referans
-     * edeceklerdir. Bu yüzden 1 obje oluşturulacak ama 3 değişken de aynı objeyi referans etmiş olacaktır.
+     * s1 deÄŸiÅŸkeni tanÄ±mlandÄ±ÄŸÄ±nda "Welcome" deÄŸeri daha Ã¶nceden havuzda bulunmayacaktÄ±r. "Welcome" deÄŸerini iÃ§eren yeni
+     * bir String objesi oluÅŸturulacak ve s1 deÄŸiÅŸkeni bu objeyi referans edecektir. Ancak s2 ve s3 deÄŸiÅŸkenleri tanÄ±mlandÄ±ÄŸÄ±nda
+     * "Welcome" deÄŸeri havuzda bulunduÄŸu iÃ§in bu deÄŸiÅŸkenler direkt olarak hafÄ±zadaki s1'in referans ettiÄŸi objeyi referans
+     * edeceklerdir. Bu yÃ¼zden 1 obje oluÅŸturulacak ama 3 deÄŸiÅŸken de aynÄ± objeyi referans etmiÅŸ olacaktÄ±r.
      * 
-     * Not: Açıkladığım durum "Welcome" değeri çift tırnak ile tanımlandığı için geçerli. Eğer s1, s2 ve s3 değişkenlerine
-     * ayrı ayrı <<new String("Welcome")>> ataması yapılsaydı String Pool yapısına bakılmadan 3 farklı obje oluşturulacaktı
-     * ve her değişken, "Welcome" değeri için bellekten ayrılan 3 farklı yeri referans edecekti.
+     * Not: AÃ§Ä±kladÄ±ÄŸÄ±m durum "Welcome" deÄŸeri Ã§ift tÄ±rnak ile tanÄ±mlandÄ±ÄŸÄ± iÃ§in geÃ§erli. EÄŸer s1, s2 ve s3 deÄŸiÅŸkenlerine
+     * ayrÄ± ayrÄ± <<new String("Welcome")>> atamasÄ± yapÄ±lsaydÄ± String Pool yapÄ±sÄ±na bakÄ±lmadan 3 farklÄ± obje oluÅŸturulacaktÄ±
+     * ve her deÄŸiÅŸken, "Welcome" deÄŸeri iÃ§in bellekten ayrÄ±lan 3 farklÄ± yeri referans edecekti.
     */
     
     static String staticValue = "code";
@@ -36,37 +36,37 @@ public class HomeworkWeek1 {
         
     	return "";
     }
-    
-	public static void main(String[] args) {
+	
+    public static void main(String[] args) {
 		
-		int arrayLength = 5;
+        int arrayLength = 5;
 		
-		try
-		{
-			Scanner scanner = new Scanner(System.in);
+	try
+	{
+	    Scanner scanner = new Scanner(System.in);
 			
-			String[] stringArray = new String[arrayLength]; 
+	    String[] stringArray = new String[arrayLength]; 
 			
-			for(int i=0; i<arrayLength; i++) 
-			{
-			    System.out.print((i+1)+ ". degeri giriniz: ");
-			    stringArray[i] = scanner.nextLine();
-			}
+	    for(int i=0; i<arrayLength; i++) 
+	    {
+	        System.out.print((i+1)+ ". degeri giriniz: ");
+	        stringArray[i] = scanner.nextLine();
+	    }
 			
-			String result = findStringFromArray(stringArray);
+	    String result = findStringFromArray(stringArray);
 			
-			if(result.isEmpty())
-				System.out.println("Tanımlı value'yu içeren String deger bulunamadı."); 
-			else
-				System.out.println("Tanımlı value'yu içeren String deger: " + result);
+	    if(result.isEmpty())
+	        System.out.println("TanÄ±mlÄ± value'yu iÃ§eren String deger bulunamadÄ±."); 
+	    else
+		System.out.println("TanÄ±mlÄ± value'yu iÃ§eren String deger: " + result);
 			
-			scanner.close();
-		}
-		catch(Exception e)
-		{
-			System.out.println(e);
-		}
-		
+	    scanner.close();
 	}
+	catch(Exception e)
+	{
+	    System.out.println(e);
+	}
+		
+    }
 
 }

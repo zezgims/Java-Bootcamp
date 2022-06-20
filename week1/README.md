@@ -1,11 +1,13 @@
 Homework Week 1
 
 1) Aşağıdaki kod satırlarına göre kaç tane obje yaratılacaktır?
+  
   a. String s1="Welcome";  
   b. String s2="Welcome";  
   c. String s3="Welcome";
 
 2)
+
   a. static ve String data tipinde değişken yaratalım. Ve değeri "code" olsun.
   b. Dönüş tipi String olan ve String[] parametre alan bir metod yazalım. Gelen parametrenin içinde en az 5 farklı String olsun. 
      Her bir eleman içinde static olarak belirlediğimiz value içeriyor mu içermiyor mu koşulunu kontrol etsin. 

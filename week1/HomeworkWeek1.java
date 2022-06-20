@@ -60,7 +60,7 @@ public class HomeworkWeek1 {
 	    else
 		System.out.println("Tanımlı value'yu içeren String deger: " + result);
 			
-	    scanner.close();
+	    scanner.clos();
 	}
 	catch(Exception e)
 	{

@@ -7,94 +7,94 @@ import week2.service.BillService;
 
 public class Main {
 	
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 		
-		String starString = getStarString();
+        String starString = getStarString();
 		
-		MemberAccount member = new MemberAccount("Zeynep", "Yalçınkaya", 2612, "26A1998", 150, "5515913598");
+	MemberAccount member = new MemberAccount("Zeynep", "YalÃ§Ã½nkaya", 2612, "26A1998", 150, "5515913598");
 		
-		Bill[] billList = new Bill[3];		
-		billList[0] = new Bill(100, 1, 2612);
-		billList[1] = new Bill(150, 2, 2613);
-		billList[2]= new Bill(200, 3, 2614);
+	Bill[] billList = new Bill[3];		
+	billList[0] = new Bill(100, 1, 2612);
+	billList[1] = new Bill(150, 2, 2613);
+	billList[2]= new Bill(200, 3, 2614);
 		
-		BillService client = new Client();
+	BillService client = new Client();
 		
-		Response response = new Response();
+	Response response = new Response();
 		
-		System.out.println("Test 1\n");
-		//Client'e ait payment() metodu için; fatura tutarının, üyenin bakiyesinden az olduğu durumu test eder.
-		try {
-			response = client.payment(billList[0].getBillType(), member.getMemberCode(), billList[0].getAmount(), billList[0].getProcessDate(), member.getBalance());
-		} catch (CustomException e) {
-			System.out.println(e.getMessage());
-		}
-		if(response.getCode().equals("0")) 
-			System.out.println("İşlem başarılı. Oluşturulma tarihi :" + response.getDate());
-		else
-			System.out.println("İşlem başarısız.");
-		
-		System.out.println("\n"+starString);
-		
-		
-		System.out.println("Test 2\n");
-		//Client'e ait payment() metodu için; fatura tutarının, üyenin bakiyesinden fazla olduğu durumu test eder.
-		response = new Response(); 
-		try {
-			response = client.payment(billList[2].getBillType(), member.getMemberCode(), billList[2].getAmount(), billList[2].getProcessDate(), member.getBalance());
-		} catch (CustomException e) {
-			System.out.println(e.getMessage());
-		}
-		if(response.getCode().equals("0")) 
-			System.out.println("İşlem başarılı. Oluşturulma tarihi :" + response.getDate());
-		else
-			System.out.println("İşlem başarısız.");
-		
-		System.out.println("\n"+starString);
-		
-		
-		System.out.println("Test 3\n");
-		//Client'e ait query() metodu için; fatura türlerine göre sorgulama işlemini test eder.
-		for(Bill bill: billList) {	
-			response = new Response(); 
-			int billType = bill.getBillType();
-			
-			if(billType == 1)		//Fatura türü 1'e eşit olduğu durumlarda telefon faturasını sorgular.		
-				response = client.query(billType, member.getMemberCode(), member.getPhoneNumber());
-			else if(billType == 2)		//Fatura türü 2'ye eşit olduğu durumlarda internet faturasını sorgular.
-				response = client.query(billType, member.getMemberCode());
-			else if(billType == 3)		//Fatura türü 3'e eşit olduğu durumlarda su faturasını sorgular.
-				response = client.query(billType, member.getMemberCode());
-			
-			if(response.getCode().equals("0")) 
-				System.out.println("İşlem başarılı. Oluşturulma tarihi :" + response.getDate());
-			else
-				System.out.println("İşlem başarısız.");
-			
-		}
-		System.out.println("\n"+starString);
-		
-		
-		System.out.println("Test 4\n");
-		//Client'e ait cancelPayment() metodu için; fatura ödeme iptali işlemini test eder.
-		response = new Response(); 
-		response = client.cancelPayment(billList[1].getBillType(), member.getMemberCode(), billList[1].getAmount(), billList[1].getProcessDate());
-		if(response.getCode().equals("0")) 
-			System.out.println("İşlem başarılı. Oluşturulma tarihi :" + response.getDate());
-		else
-			System.out.println("İşlem başarısız.");
-		
+	System.out.println("Test 1\n");
+	//Client'e ait payment() metodu iÃ§in; fatura tutarÃ½nÃ½n, Ã¼yenin bakiyesinden az olduÃ°u durumu test eder.
+	try {
+    	    response = client.payment(billList[0].getBillType(), member.getMemberCode(), billList[0].getAmount(), billList[0].getProcessDate(), member.getBalance());
+	} catch (CustomException e) {
+	    System.out.println(e.getMessage());
 	}
+	    if(response.getCode().equals("0")) 
+		System.out.println("ÃÃ¾lem baÃ¾arÃ½lÃ½. OluÃ¾turulma tarihi :" + response.getDate());
+	    else
+		System.out.println("ÃÃ¾lem baÃ¾arÃ½sÃ½z.");
+		
+	System.out.println("\n"+starString);
+		
+		
+	System.out.println("Test 2\n");
+	//Client'e ait payment() metodu iÃ§in; fatura tutarÃ½nÃ½n, Ã¼yenin bakiyesinden fazla olduÃ°u durumu test eder.
+	response = new Response(); 
+	try {
+	    response = client.payment(billList[2].getBillType(), member.getMemberCode(), billList[2].getAmount(), billList[2].getProcessDate(), member.getBalance());
+	} catch (CustomException e) {
+	    System.out.println(e.getMessage());
+	}
+	if(response.getCode().equals("0")) 
+	    System.out.println("ÃÃ¾lem baÃ¾arÃ½lÃ½. OluÃ¾turulma tarihi :" + response.getDate());
+	else
+	    System.out.println("ÃÃ¾lem baÃ¾arÃ½sÃ½z.");
+		
+	System.out.println("\n"+starString);
+		
+		
+	System.out.println("Test 3\n");
+	//Client'e ait query() metodu iÃ§in; fatura tÃ¼rlerine gÃ¶re sorgulama iÃ¾lemini test eder.
+	for(Bill bill: billList) {	
+	    response = new Response(); 
+	    int billType = bill.getBillType();
+			
+	    if(billType == 1)		//Fatura tÃ¼rÃ¼ 1'e eÃ¾it olduÃ°u durumlarda telefon faturasÃ½nÃ½ sorgular.		
+	        response = client.query(billType, member.getMemberCode(), member.getPhoneNumber());
+	    else if(billType == 2)		//Fatura tÃ¼rÃ¼ 2'ye eÃ¾it olduÃ°u durumlarda internet faturasÃ½nÃ½ sorgular.
+		response = client.query(billType, member.getMemberCode());
+	    else if(billType == 3)		//Fatura tÃ¼rÃ¼ 3'e eÃ¾it olduÃ°u durumlarda su faturasÃ½nÃ½ sorgular.
+		response = client.query(billType, member.getMemberCode());
+			
+	    if(response.getCode().equals("0")) 
+		System.out.println("ÃÃ¾lem baÃ¾arÃ½lÃ½. OluÃ¾turulma tarihi :" + response.getDate());
+	    else
+		System.out.println("ÃÃ¾lem baÃ¾arÃ½sÃ½z.");
+			
+	}
+        System.out.println("\n"+starString);
+		
+		
+	System.out.println("Test 4\n");
+	//Client'e ait cancelPayment() metodu iÃ§in; fatura Ã¶deme iptali iÃ¾lemini test eder.
+	response = new Response(); 
+	response = client.cancelPayment(billList[1].getBillType(), member.getMemberCode(), billList[1].getAmount(), billList[1].getProcessDate());
+	if(response.getCode().equals("0")) 
+	    System.out.println("ÃÃ¾lem baÃ¾arÃ½lÃ½. OluÃ¾turulma tarihi :" + response.getDate());
+	else
+	    System.out.println("ÃÃ¾lem baÃ¾arÃ½sÃ½z.");
+		
+    }
 	
-	public static String getStarString() {
+    public static String getStarString() {
 		
-		String star = "";		
-		for(int i=0; i<50; i++) {
-			star+="*";
-		}
-		
-		return star;
-		
+        String star = "";		
+	for(int i=0; i<50; i++) {
+	    star+="*";
 	}
+		
+	return star;
+		
+    }
 		
 }

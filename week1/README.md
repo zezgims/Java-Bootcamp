@@ -1,5 +1,17 @@
 Homework Week 1
 
+<ol>
+  <li> Aşağıdaki kod satırlarına göre kaç tane obje yaratılacaktır? </li>
+    <ol type="a">
+      <li> String s1="Welcome"; </li>
+      <li> String s2="Welcome"; </li>
+      <li> String s3="Welcome"; </li>
+    </ol>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>  
+
+
 1) Aşağıdaki kod satırlarına göre kaç tane obje yaratılacaktır?
   
   a. String s1="Welcome";  

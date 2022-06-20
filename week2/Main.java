@@ -29,10 +29,10 @@ public class Main {
 	} catch (CustomException e) {
 	    System.out.println(e.getMessage());
 	}
-	    if(response.getCode().equals("0")) 
-		System.out.println("Ýþlem baþarýlý. Oluþturulma tarihi :" + response.getDate());
-	    else
-		System.out.println("Ýþlem baþarýsýz.");
+	if(response.getCode().equals("0")) 
+	    System.out.println("Ýþlem baþarýlý. Oluþturulma tarihi :" + response.getDate());
+	else
+	    System.out.println("Ýþlem baþarýsýz.");
 		
 	System.out.println("\n"+starString);
 		

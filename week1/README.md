@@ -1,6 +1,6 @@
 Homework Week 1
 
-1) Aşağıdaki kod satırlarına göre kaç tane obje yaratılacaktır ?
+1) Aşağıdaki kod satırlarına göre kaç tane obje yaratılacaktır?
   a. String s1="Welcome";  
   b. String s2="Welcome";  
   c. String s3="Welcome";

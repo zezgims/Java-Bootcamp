@@ -7,7 +7,7 @@ Homework Week 1
       <li> String s2="Welcome"; </li>
       <li> String s3="Welcome"; </li>
     </ol>
-  <li>Tea</li>
+  <li> </li>
     <ol type="a">
       <li> static ve String data tipinde değişken yaratalım. Ve değeri "code" olsun. </li>
       <li> Dönüş tipi String olan ve String[] parametre alan bir metod yazalım. Gelen parametrenin içinde en az 5 farklı String olsun. 

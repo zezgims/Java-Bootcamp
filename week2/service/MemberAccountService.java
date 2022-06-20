@@ -4,20 +4,20 @@ import week2.model.MemberAccount;
 
 public class MemberAccountService {
 
-	public void create(MemberAccount member) {
-		System.out.println("Yeni üye oluşturuldu.");
-	}
+    public void create(MemberAccount member) {
+	System.out.println("Yeni Ã¼ye oluÅŸturuldu.");
+    }
 	
     public void read(MemberAccount member) {
-		System.out.println("Üye bilgileri görüntüleniyor.");
-	}
+	System.out.println("Ãœye bilgileri gÃ¶rÃ¼ntÃ¼leniyor.");
+    }
     
     public void update(MemberAccount member) {
-		System.out.println("Üye bilgileri güncellendi.");
-	}
+        System.out.println("Ãœye bilgileri gÃ¼ncellendi.");
+    }
     
     public void delete(MemberAccount member) {
-		System.out.println("Üye silindi.");
-	}
+	System.out.println("Ãœye silindi.");
+    }
     
 }

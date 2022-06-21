@@ -1,5 +1,5 @@
 package week2.model;
-
+//setid ve setnamede membercode değişmeli
 public class MemberAccount {
 
     private String name;

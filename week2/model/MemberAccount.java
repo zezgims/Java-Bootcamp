@@ -17,7 +17,7 @@ public class MemberAccount {
 	this.code = code;
 	this.balance = balance;
 	this.phoneNumber = phoneNumber;
-	this.memberCode = id+name.substring(0,2);		//id + name'in ilk 2 harfinden oluþan code atamasýný yapar.	
+	this.memberCode = id+name.substring(0,2);		//id + name'in ilk 2 harfinden oluşan code atamasını yapar.	
     }
 	
     public String getName() {

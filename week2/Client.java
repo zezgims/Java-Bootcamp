@@ -30,7 +30,7 @@ public class Client extends BillService {
     @Override
     public Response query(int billType, String memberCode) {
 		
-        if(billType == 2)		//Fatura türü 2'ye eiit olduğu durumlarda internet faturasını sorgular.
+        if(billType == 2)		//Fatura türü 2'ye eşit olduğu durumlarda internet faturasını sorgular.
 	    System.out.println("İnternet faturası sorgulandı.");
 	else if(billType == 3)		//Fatura türü 3'e eşit olduğu durumlarda su faturasını sorgular.
 	    System.out.println("Su faturası sorgulandı.");
@@ -42,8 +42,8 @@ public class Client extends BillService {
     @Override
     public Response query(int billType, String memberCode, String phoneNumber) {
 		
-        //Fatura türü 1'e eþit olduðu durumlarda telefon faturasýný sorgular.
-	System.out.println("Telefon faturasý sorgulandý.");		
+        //Fatura türü 1'e eşit olduğu durumlarda telefon faturasını sorgular.
+	System.out.println("Telefon faturası sorgulandı.");		
 		
 	return new Response("0");
 		

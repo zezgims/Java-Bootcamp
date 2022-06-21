@@ -65,8 +65,5 @@ public class MemberAccount {
     public String getMemberCode() {
 	return memberCode;
     }
-    public void setMemberCode(String memberCode) {
-	this.memberCode = memberCode;
-    }  
 	
 }

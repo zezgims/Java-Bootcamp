@@ -1,7 +1,7 @@
 package week1;
 import java.util.Scanner;
 
-public class HomeworkWeek1 {
+public class Main {
 	
     String s1 = "Welcome";
     String s2 = "Welcome";
@@ -28,8 +28,7 @@ public class HomeworkWeek1 {
     
     public static String findStringFromArray(String[] stringArray){
 
-    	for(String str: stringArray)
-        {
+    	for(String str: stringArray) {
     	    if(str.contains(staticValue))
     	    	return str;
         }
@@ -41,14 +40,12 @@ public class HomeworkWeek1 {
 		
         int arrayLength = 5;
 		
-	try
-	{
+	try {
 	    Scanner scanner = new Scanner(System.in);
 			
 	    String[] stringArray = new String[arrayLength]; 
 			
-	    for(int i=0; i<arrayLength; i++) 
-	    {
+	    for(int i=0; i<arrayLength; i++) {
 	        System.out.print((i+1)+ ". degeri giriniz: ");
 	        stringArray[i] = scanner.nextLine();
 	    }
@@ -61,9 +58,7 @@ public class HomeworkWeek1 {
 		System.out.println("Tanımlı value'yu içeren String deger: " + result);
 			
 	    scanner.close();
-	}
-	catch(Exception e)
-	{
+	} catch(Exception e) {
 	    System.out.println(e);
 	}
 		

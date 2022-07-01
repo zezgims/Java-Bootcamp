@@ -15,27 +15,27 @@ import model.Student;
 
 public class JsonReader {
 	
-	private String filePath;
+    private String filePath;
 	
-	public JsonReader(String filePath) {
-		this.filePath = filePath;
-	}
+    public JsonReader(String filePath) {
+	this.filePath = filePath;
+    }
 	
-	public List<Student> read() throws JsonSyntaxException, JsonIOException, FileNotFoundException {
+    public List<Student> read() throws JsonSyntaxException, JsonIOException, FileNotFoundException {
 		
-		String jsonKeyName = "students";		//Json dosyasındaki map key'i bir değişkene atanır.
-		List<Student> studentList;	
-		Map<String, List<Student>> jsonMap;		//Json dosyası türünden bir map oluşturur.
+	String jsonKeyName = "students";		//Json dosyasÄ±ndaki map key'i bir deÄŸiÅŸkene atanÄ±r.
+	List<Student> studentList;	
+	Map<String, List<Student>> jsonMap;		//Json dosyasÄ± tÃ¼rÃ¼nden bir map oluÅŸturur.
 		
-		Gson gson = new Gson();		//Json dosyasını okumak için gson kütüphanesi kullanıldı.
+	Gson gson = new Gson();		//Json dosyasÄ±nÄ± okumak iÃ§in gson kÃ¼tÃ¼phanesi kullanÄ±ldÄ±.
 		
-		Type type = new TypeToken<Map<String, List<Student>>>() {}.getType();		
-		jsonMap = gson.fromJson(new FileReader(filePath), type);		//Json dosyası okuma işlemini gerçekleştirir.
+	Type type = new TypeToken<Map<String, List<Student>>>() {}.getType();		
+	jsonMap = gson.fromJson(new FileReader(filePath), type);		//Json dosyasÄ± okuma iÅŸlemini gerÃ§ekleÅŸtirir.
 		
-		studentList = jsonMap.get(jsonKeyName);		//Json dosyasındaki map key'inin value'ları Student listesine atanır.
+	studentList = jsonMap.get(jsonKeyName);		//Json dosyasÄ±ndaki map key'inin value'larÄ± Student listesine atanÄ±r.
 		
-		return studentList;
+	return studentList;
 		
-	}
+    }
 	
 }

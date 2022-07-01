@@ -6,11 +6,11 @@ import model.Student;
 
 public class JsonWriter {
 	
-	public void write(List<Student> studentList) {		
+    public void write(List<Student> studentList) {		
 		
-		//Liste içerisindeki nesnelerin deðerlerini yazdýrýr. Bu yazdýrma iþlemi, System.out.println()'ýn toString() metodunu çaðýrmasýyla istenilen formatta gerçekleþtirilir.
-		studentList.forEach(student -> System.out.println(student));		
+	//Liste iÃ§erisindeki nesnelerin deÄŸerlerini yazdÄ±rÄ±r. Bu yazdÄ±rma iÅŸlemi, System.out.println()'Ä±n toString() metodunu Ã§aÄŸÄ±rmasÄ±yla istenilen formatta gerÃ§ekleÅŸtirilir.
+	studentList.forEach(student -> System.out.println(student));		
 		
-	}
+    }
 	
 }

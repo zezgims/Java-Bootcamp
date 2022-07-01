@@ -3,32 +3,32 @@ package thread;
 import json.JsonReader;
 import model.StudentListContainer;
 
-public class ReaderThread implements Runnable {		//Runnable @FunctionInterface implement edilerek thread class'ý oluþturur.
+public class ReaderThread implements Runnable {		//Runnable @FunctionInterface implement edilerek thread class'Ä± oluÅŸturur.
 	
-	private String filePath; 
+    private String filePath; 
 	
-	public ReaderThread(String filePath) {
-		this.filePath = filePath;
-	}
+    public ReaderThread(String filePath) {
+	this.filePath = filePath;
+    }
 	
-	@Override
-	public void run() {		//Runnable'a ait metot.
+    @Override
+    public void run() {		//Runnable'a ait metot.
 		
-		JsonReader jsonReader = new JsonReader(filePath);		//Okuma iþlemini yapacak class'a eriþim saðlamak için nesne oluþturur.
+	JsonReader jsonReader = new JsonReader(filePath);		//Okuma iÅŸlemini yapacak class'a eriÅŸim saÄŸlamak iÃ§in nesne oluÅŸturur.
 		
-		try {
-			StudentListContainer.studentList = jsonReader.read();		//Okuma metodu çaðrýlýr ve o metodun döndürdüðü liste static tanýmlanmýþ studentList'e eþitlenir.
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
+	try {
+	    StudentListContainer.studentList = jsonReader.read();		//Okuma metodu Ã§aÄŸrÄ±lÄ±r ve o metodun dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ liste static tanÄ±mlanmÄ±ÅŸ studentList'e eÅŸitlenir.
+	} catch (Exception e) {
+	    e.printStackTrace();
 	}
+		
+    }
 	
-	public String getFilePath() {
-		return filePath;
-	}
-	public void setFilePath(String filePath) {
-		this.filePath = filePath;
-	}
+    public String getFilePath() {
+	return filePath;
+    }
+    public void setFilePath(String filePath) {
+	this.filePath = filePath;
+    }
 
 }

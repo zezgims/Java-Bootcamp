@@ -5,12 +5,5 @@
 		{"name":"Ezgi", "surname":"Kaya", "age": 18}, 
 		{"name":"Kadir", "surname":"Yalçınkaya", "age": 31}, 
 		{"name":"Elif", "surname":"Güvercin", "age": 2}
-	],
-	teacher:
-	[
-		{"name":"Zeynep", "surname":"Yalçın", "age": 30}, 
-		{"name":"Ezgi", "surname":"Kaya", "age": 18}, 
-		{"name":"Kadir", "surname":"Yalçınkaya", "age": 31}, 
-		{"name":"Elif", "surname":"Güvercin", "age": 2}
 	]
 }

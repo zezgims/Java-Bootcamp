@@ -3,15 +3,15 @@ package thread;
 import json.JsonWriter;
 import model.StudentListContainer;
 
-public class WriterThread implements Runnable {		//Runnable @FunctionInterface implement edilerek thread class'ı oluşturur.
+public class WriterThread implements Runnable {		//Runnable @FunctionInterface implement edilerek thread class'Ä± oluÅŸturur.
 	
-	@Override
-	public void run() {		//Runnable'a ait metot.
+    @Override
+    public void run() {		//Runnable'a ait metot.
 		
-		JsonWriter jsonWriter = new JsonWriter();		//Yazma işlemini yapacak class'a erişim sağlamak için nesne oluşturur.
+	JsonWriter jsonWriter = new JsonWriter();		//Yazma iÅŸlemini yapacak class'a eriÅŸim saÄŸlamak iÃ§in nesne oluÅŸturur.
 		
-		jsonWriter.write(StudentListContainer.studentList);		//Yazma metodu çağrılır, parametre olarak Student nesnelerini içeren static tanımlanmış listeyi gönderir.
+	jsonWriter.write(StudentListContainer.studentList);		//Yazma metodu Ã§aÄŸrÄ±lÄ±r, parametre olarak Student nesnelerini iÃ§eren static tanÄ±mlanmÄ±ÅŸ listeyi gÃ¶nderir.
 		
-	}
+    }
 
 }
